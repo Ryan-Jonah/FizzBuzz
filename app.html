@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A coding project by Ryan Jonah</title>
+    <title>FizzBuzz: A coding project by Ryan Jonah</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,8 +28,7 @@
     <!-- NAV Section -->
     <nav class="navbar navbar-expand-md fixed-top navbar-dark">
         <div class="container-fluid">
-            <img src="/img/favicon/android-chrome-192x192.png" width="50" alt="Logo" class="d-inline me-2 ms-3">
-            <span class="fw-bold ms-2 fs-2 brand-title">App Name</span>
+            <img src="/img/FizzBuzz_Title.svg" width="200" alt="Logo" class="d-inline ms-3">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -49,7 +48,7 @@
                         <a class="nav-link" href="#" target="_blank">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/RyanJ-NBCC/JsSiteTempate" target="_blank">Git Repo</a>
+                        <a class="nav-link" href="https://github.com/RyanJ-NBCC/FizzBuzz" target="_blank">Git Repo</a>
                     </li>
                 </ul>
             </div>
@@ -57,8 +56,47 @@
     </nav>
 
     <!-- MAIN Section  -->
-    <main class="flex-shrink-0">
-      
+    <main class="flex-shrink-0 m-5">
+        <div class="container-fluid">
+            <div class="row mt-5 row-cols-1 row-cols-md-2">
+                <div class="col col-lg-4 right-border">
+                    <h1>FizzBuzz</h1>
+                    <h5 class="lead">
+                        When it counts, you Fizz Buzz. A Javascript coding exercise using loops. 
+                        Write a program that prints the numbers from 1 to 100. For each multiple of 3 display "Fizz" 
+                        instead of the number and for each multiple of 5 display "Buzz". If a multiple of both, display "Fizzbuzz".
+                    </h5>
+                    <h2 class="mt-5 bottom-border">Instructions</h2>
+                    <p>
+                        Enter a Fizz and a Buzz value. Press the button and the values will appear.
+                    </p>
+                </div>           
+                <div class="col col-lg-8">
+                    <div>
+                        <h5>Enter Values:</h5>
+                        <form class="row row-cols-2 gy-2 gx-3">
+                            <div class="col">
+                                <input type="number" id="fizzValue" class="form-control input-green" value=3 placeholder="Fizz" aria-label="Fizz">
+                            </div>
+                            <div class="col">
+                                <input type="number" id="buzzValue" class="form-control input-green" value=5 placeholder="Buzz" aria-label="Buzz">
+                            </div>
+                            <div class="col-12 d-flex justify-content-end">
+                                <button type="button" id="btnSubmit" class="btn-lg button-green">FizzBuzz!</button>
+                            </div>
+                        </form>
+                        <h2 class="mt-5 bottom-border" >Results: </h2>
+                        <div class="table-responsive">
+                            <table class="table table-sm">
+                                <tbody id="results">
+                                    <!-- JS results go here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>               
+            </div>
+        </div>
     </main>
 
     <!-- FOOTER Section -->
@@ -69,7 +107,7 @@
                     <span class="text-muted">&copy; 2021 Copyright</span><br> Ryan Jonah | ryan_c_jonah@yahoo.ca
                 </div>
                 <div class="col justify-content-center">
-                    <img height="80px" src="img/Logo-Cropped.PNG">
+                    <img height="80px" src="img/RyanJ_Logo.svg" alt="Logo">
                 </div>
                 <div class="col d-flex justify-content-center">
                     <div class="row">                    
@@ -104,6 +142,9 @@
 
     <!-- External JS -->
     <script src="js/site.js"></script>
+    <script>
+        document.getElementById('btnSubmit').addEventListener("click", getValues)
+    </script>
 </body>
 
 </html>
