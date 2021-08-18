@@ -180,6 +180,20 @@ word-wrap: break-word;
     border-left: solid 2px var(--console-primary);
 }
 
+/* ------ FIZZBUZZ ------ */
+.Fizz{
+    color: rgb(255, 162, 219) !important;
+}
+
+.Buzz {
+    color: cyan !important;
+}
+
+.FizzBuzz{
+    color: orange !important;
+    font-weight: bold;
+}
+
 /* ------ MEDIA QUERIES ------ */
 @media only screen and (min-width: 992px){
     .side-border{
