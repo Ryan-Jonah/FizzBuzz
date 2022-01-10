@@ -1,0 +1,11 @@
+.Fizz {
+    color: var(--bs-secondary)
+}
+
+.Buzz {
+    color: var(--bs-warning)
+}
+
+.FizzBuzz {
+    color: var(--bs-info)
+}
